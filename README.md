@@ -8,6 +8,7 @@ Inspired by [Hack Club Nest](https://nest.hackclub.com).
 ```
 tharavad/
 ├── index.html              — landing page (tharavad.xyz)
+├── zia0/                   — iptables rules for proxmox host 
 ├── tinkerspace-vm/         — user shell VM config
 ├── secure-vm/              — Authentik, Headscale, Vaultwarden
 ├── vps/                    — Caddy, nftables
