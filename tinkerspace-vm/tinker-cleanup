@@ -13,6 +13,7 @@ EXPIRY_SECS=$((EXPIRY_DAYS * 86400))
 
 changed=0
 tmpfile=$(mktemp)
+trap 'rm -f "$tmpfile"' EXIT
 
 while read -r user port timestamp; do
   age=$((NOW - timestamp))
@@ -31,7 +32,10 @@ while read -r user port timestamp; do
   fi
 done < "$PORTS_FILE"
 
-mv "$tmpfile" "$PORTS_FILE"
+# Rewrite the file contents without replacing the inode.
+# Replacing it via `mv` makes the new file inherit mktemp's ownership/mode,
+# which can lock regular users out of the shared ports registry.
+cat "$tmpfile" > "$PORTS_FILE"
 
 if [[ $changed -eq 1 ]]; then
   /usr/bin/caddy reload --config /etc/caddy/Caddyfile 2>/dev/null || true
