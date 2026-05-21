@@ -28,6 +28,7 @@ SSH in: `ssh -p 2222 username@tharavad.xyz`
 | vault.tharavad.xyz | Vaultwarden - secrets |
 | headscale.tharavad.xyz | Headscale - VPN |
 | chat.tharavad.xyz | Mattermost - chat |
+| ctf.tharavad.xyz | rCTF - ctf |
 
 ## Replace Before Deploying
 

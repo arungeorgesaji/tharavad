@@ -44,6 +44,14 @@ wiki.tharavad.xyz {
 	file_server
 }
 
+ctf.tharavad.xyz {
+	tls {
+		dns hetzner_cloud {env.HETZNER_TOKEN}
+		propagation_delay 2m
+	}
+	reverse_proxy 10.10.0.2:8081 
+}
+
 *.tharavad.xyz {
 	tls {
 		dns hetzner_cloud {env.HETZNER_TOKEN}
