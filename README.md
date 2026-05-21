@@ -8,10 +8,10 @@ Inspired by [Hack Club Nest](https://nest.hackclub.com).
 ```
 tharavad/
 ├── index.html              — landing page (tharavad.xyz)
-├── zia0/                   — iptables rules for proxmox host 
+├── zia0/                   — iptables rules for proxmox host and mattermost config 
 ├── tinkerspace-vm/         — user shell VM config
 ├── secure-vm/              — Authentik, Headscale, Vaultwarden
-├── vps/                    — Caddy, nftables
+├── vps/                    — Caddy, nftables, turnserver
 └── cli/                    — tinker-cli (coming soon)
 ```
 
@@ -24,7 +24,7 @@ SSH in: `ssh -p 2222 username@tharavad.xyz`
 
 | URL | Service |
 |-----|---------|
-| auth.tharavad.xyz | Authentik — identity & SSO |
-| vault.tharavad.xyz | Vaultwarden — secrets |
-| headscale.tharavad.xyz | Headscale — VPN |
-| chat.tharavad.xyz | Mattermost — coming soon |
+| auth.tharavad.xyz | Authentik - identity & SSO |
+| vault.tharavad.xyz | Vaultwarden - secrets |
+| headscale.tharavad.xyz | Headscale - VPN |
+| chat.tharavad.xyz | Mattermost - chat |
